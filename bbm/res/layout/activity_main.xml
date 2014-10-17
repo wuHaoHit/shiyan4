@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/bbm_layout"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:clickable="true"
+  >
+		<RelativeLayout 
+        android:id="@+id/bbm_title_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"  > 
+  			<Button
+	            android:id="@+id/bbm_ret_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:text="帮帮忙"
+		    />    
+  	    <Button 
+				android:id="@+id/right_btn"
+			    android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true" 
+        		android:layout_centerVertical="true"
+        		android:layout_marginRight="5dp"
+        		android:text="帮帮忙"
+				/>
+		</RelativeLayout>
+		<LinearLayout 
+        android:id="@+id/bbm_choose_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/bbm_title_layout"
+		android:orientation="horizontal"
+		android:gravity="center_vertical"  > 
+  			<Button
+	            android:id="@+id/bbm_read"
+	            android:layout_weight="1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	          android:layout_gravity="center_horizontal"
+	            android:text="阅读"
+		    />    
+  	    <Button 
+				android:id="@+id/bbm_publish"
+				android:layout_weight="1"
+			    android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        	
+        	android:layout_gravity="center_horizontal"
+        		android:text="发布"
+				/>
+		</LinearLayout>
+    <com.example.bbm.AutoListView
+        android:id="@+id/bbm_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/bbm_choose_layout"
+        android:cacheColorHint="#0000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+     />
+    
+</RelativeLayout>
